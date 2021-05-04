@@ -39,4 +39,4 @@ jobs:
         name: veloren-nix
         authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
     - name: Build
-      run: nix build --no-link ./veloren -L --show-trace
+      run: nix build --no-link -L --show-trace
