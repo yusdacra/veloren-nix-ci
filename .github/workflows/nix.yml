@@ -11,6 +11,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Set Swap Space
+      uses: pierotofy/set-swap-space@49819abfb41bd9b44fb781159c033dba90353a7c
+      with:
+        swap-size-gb: 10
     - name: Checkout repo
       run: git clone --depth 1 https://gitlab.com/veloren/veloren.git .
     - name: Create LFS file list
